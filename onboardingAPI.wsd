@@ -1,0 +1,17 @@
+title Onboarding Diagram
+
+home->+WIP:
+WIP->+customerData: collectCustomerData(input)
+customerData-->-WIP: saveToWIP 
+
+WIP->+accountData: collectAccountData(input)
+accountData-->-WIP: saveToWIP
+
+WIP->+activityData: collectActivityData(input)
+activityData-->-WIP: saveToWIP
+
+WIP-->+commitWIP: completeOnboarding(input)
+commitWIP-->-home: goHome
+
+WIP-->+cancelWIP: cancelOnboarding(input)
+cancelWIP-->-home: goHome
